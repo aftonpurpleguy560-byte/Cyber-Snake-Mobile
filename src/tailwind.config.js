@@ -1,8 +1,11 @@
-.shadow-neon {
-  text-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe, 0 0 40px #bc13fe;
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 }
-
-.text-neon-purple {
-  color: #d8b4fe;
-}
-
