@@ -2,10 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  background-color: #050505;
-  color: white;
-  overflow: hidden;
+/* Cyber Snake Özel Teması */
+:root {
+  --neon-purple: #bc13fe;
+  --neon-blue: #00f2ff;
+  --bg-dark: #050505;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden; /* Tablette kaydırmayı engeller */
+  user-select: none; /* Metin seçmeyi kapatır */
+  -webkit-tap-highlight-color: transparent; /* Dokunma gölgesini siler */
+}
+
+/* Neon Parlama Efektleri */
+.shadow-neon {
+  box-shadow: 0 0 10px var(--neon-purple), 0 0 20px rgba(188, 19, 254, 0.4);
+}
+
+.text-neon {
+  text-shadow: 0 0 5px var(--neon-purple), 0 0 10px var(--neon-purple);
+}
+
+/* Yılan Grid Alanı */
+canvas {
+  image-rendering: pixelated;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #0f0f1b, #050505);
+}
+
+/* Tablet Butonları İçin Özel Dokunuş */
+button:active {
+  transform: scale(0.9);
+  filter: brightness(1.5);
+}
